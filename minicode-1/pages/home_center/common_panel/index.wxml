@@ -1,0 +1,86 @@
+<!--miniprogram/pages/home_center/common_panel/index.js.wxml-->
+<wxs src="./index.wxs" module="utils" />
+
+
+<navbar device_name="{{device_name}}" bind:jumpTodeviceEditPage="jumpTodeviceEditPage" />
+
+
+
+<block wx:if="{{isRoDpListShow}}">
+  <view class="statuslist">
+    <block wx:for="{{roDpList}}" wx:key="{{item.code}}" wx:for-item="item" wx:for-index='idx'>
+      <view class="{{utils.countDpItem(roDpListLength,idx)}}">
+        <view class="roDpItem-dpName">{{item.code}}</view>
+        <view class="roDpItem-status">{{item.value}}</view>
+      </view>
+    </block>
+  </view>
+</block>
+
+              <view style="display: flex; flex-direction: column; min-height: 150px; padding: 10px; margin-bottom: 10px; width: 750rpx; height: 692rpx; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+                
+                <view
+                  style="flex: 1; width: 704rpx; height: 783rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+                  <image
+                    style="position: relative; width: 509rpx; height: 469rpx; display: inline-block; box-sizing: border-box; left: 101rpx; top: 29rpx"
+                    src="/image/socket.png" />
+                
+                  <text style="position: relative; left: -248rpx; top: 94rpx">插座已开启</text>
+                </view>
+                
+              </view>
+
+              <view
+                style="display: flex; flex-direction: row; min-height: 150px; padding: 10px; margin: 10px; width: 704rpx; left: 0rpx; top: -47rpx; height: 324rpx; box-sizing: border-box; position: relative">
+                <view
+                  style="flex: 1; width: 221rpx; height: 155rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+                  <text style="position: relative; left: 64rpx; top: 36rpx">开 关
+                    220V
+                  </text>
+                
+                
+                
+                  <image
+                    style="position: relative; width: 113rpx; height: 111rpx; display: inline-block; box-sizing: border-box; left: -4rpx; top: 66rpx"
+                    src="/image/开关.png" />
+                  <image
+                    style="position: relative; width: 113rpx; height: 111rpx; display: inline-block; box-sizing: border-box; left: 174rpx; top: -54rpx"
+                    src="/image/倒计时.png" />
+                  <image
+                    style="position: relative; width: 113rpx; height: 111rpx; display: inline-block; box-sizing: border-box; left: 357rpx; top: -174rpx"
+                    src="/image/定时.png" />
+                  <image
+                    style="position: relative; width: 113rpx; height: 111rpx; display: inline-block; box-sizing: border-box; left: 551rpx; top: -293rpx"
+                    src="/image/电量.png" />
+                
+                
+                
+                
+                
+                
+                
+                  <text style="position: relative; left: -97rpx; top: -190rpx">开关</text>
+                  <text style="position: relative; left: 174rpx; top: -239rpx">倒计时</text>
+                  <text style="position: relative; left: 263rpx; top: -239rpx">定时</text>
+                  <text style="position: relative; left: 570rpx; top: -286rpx">电量</text>
+                </view>
+                <view
+                  style="flex: 1; width: 218rpx; height: 155rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+                  <text style="position: relative; left: 73rpx; top: 33rpx">功 率
+                    0.0W
+                  </text>
+                </view>
+                <view
+                  style="flex: 1; width: 218rpx; height: 155rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+                  <text style="position: relative; left: 66rpx; top: 38rpx">电 流
+                    0mA
+                  </text>
+                </view>
+              
+                
+              </view>
+            
+
+            
+
+
